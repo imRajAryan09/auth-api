@@ -21,8 +21,7 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 		customError.message = `No item found with id : ${err.value}`;
 		customError.statusCode = 404;
 	}
-
-	return res.status(customError.statusCode).json({ message: customError.message });
+	return res.status(customError.statusCode).json({ error: customError.message });
 };
 
 module.exports = errorHandlerMiddleware;
