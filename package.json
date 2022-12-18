@@ -25,6 +25,7 @@
 		"joi": "^17.4.0",
 		"jsonwebtoken": "^8.5.1",
 		"mongoose": "^6.0.8",
+		"google-auth-library": "^8.7.0",
 		"morgan": "^1.10.0",
 		"validator": "^13.6.0",
 		"xss-clean": "^0.1.1"
