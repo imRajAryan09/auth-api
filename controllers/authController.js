@@ -17,10 +17,10 @@ const registerUser = async (req, res) => {
 		throw new CustomError.BadRequestError("Email already exists");
 	}
 	// code to detect if a farzi email is entered
-	const { valid } = await isEmailValid(email);
-	if (!valid) {
-		throw new CustomError.BadRequestError("Inactive email");
-	}
+	// const { valid } = await isEmailValid(email);
+	// if (!valid) {
+	// 	throw new CustomError.BadRequestError("Inactive email");
+	// }
 	// register first user as admin
 	const role = (await User.countDocuments({})) === 0 ? "admin" : "user";
 	const verificationToken = crypto.randomBytes(40).toString("hex");
